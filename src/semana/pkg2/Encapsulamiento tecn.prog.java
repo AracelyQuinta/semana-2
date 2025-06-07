@@ -13,9 +13,28 @@ package semana.pkg2;
  * Clase que representa a un estudiante y sus promedios académicos.
  * Aplica Encapsulamiento al proteger sus atributos.
  */
-class Estudiante {
+// Definición de la clase abstracta
+abstract class estudiante {  
+    // Atributos protegidos o privados
+    protected String nombre;  // Nombre del estudiante
 
-    // Atributos protegidos: solo accesibles desde la misma clase o subclases
+
+    // Constructor
+    public estudiante(String nombre) {  
+        this.nombre = nombre;    
+    }  
+
+    // Métodos concretos (pueden tener implementación)
+    public void metodoConcreto() {  
+        System.out.println("Este es un método con implementación.");  
+    }  
+
+    // Métodos abstractos (deben ser implementados por las subclases)
+    public abstract void metodoAbstracto();
+}
+
+
+class Estudiante {  // Atributos protegidos: solo accesibles desde la misma clase o subclases
     protected String nombre;  // Nombre del estudiante
     protected float promedioMatematica;  // Promedio en Matemáticas
     protected float promedioCiencias;    // Promedio en Ciencias

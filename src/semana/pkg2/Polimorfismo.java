@@ -62,7 +62,7 @@ public class Polimorfismo {
     public static void main(String[] args) {
         Persona estudiante = new Estudiante("Aracely", 90, 85, 88, 92);
         Persona profesor = new Profesor("María", "Matemáticas");
-
+            
         estudiante.mostrarInformacion();  // Se ejecuta la versión específica de `Estudiante`
         profesor.mostrarInformacion();    // Se ejecuta la versión específica de `Profesor`
     }
