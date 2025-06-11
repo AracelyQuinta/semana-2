@@ -1,25 +1,24 @@
 # Programación Tradicional
 # Ejemplo: Determinacion del promedio semanal del clima.
 
-def calculo_de_la_temperatura_semanal():
-    temperaturas = []  # Lista para almacenar temperaturas de cada día
+# Lista de días de la semana.
+Dias_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
-    dias_de_la_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+# Lista vacía para almacenar las temperaturas ingresadas por el usuario.
+Dias_temperatura = []
 
-    for i in range(7):
-        dia = input(f"Inserta el día ({dias_de_la_semana[i]}): ")
+# Variables para calcular la suma y el promedio de temperaturas.
+suma = 0
+promedio = 0
 
-        # Validar si el día ingresado es correcto
-        if dia not in dias_de_la_semana:
-            return f"El día '{dia}' no se encuentra en los datos."
+# Bucle que recorre cada día de la semana y solicita la temperatura.
+for dia in Dias_semana:
+    temperatura = float(input(f"Ingrese la temperatura del día: {dia}"))  # Solicita y convierte la entrada a tipo flotante.
+    suma += temperatura  # Acumula la suma de todas las temperaturas ingresadas.
+    Dias_temperatura.append(temperatura)  # Almacena la temperatura en la lista.
 
-        else:
-            temperatura = float(input(f"Inserta la temperatura de {dia}: "))
-            temperaturas.append(temperatura)  # Guardamos la temperatura
+    # Imprime la temperatura ingresada del día correspondiente.
+    print(f"{dia} su temperatura es de {temperatura} °C.")
 
-    # Calcular promedio semanal
-    promedio = sum(temperaturas) / len(temperaturas)
-    print(f"La temperatura promedio semanal es: {promedio:.2f}°C")
-
-
-calculo_de_la_temperatura_semanal()  # Llamada a la función
+# Calcula y muestra el promedio de temperaturas de la semana.
+print("promedio", suma / len(Dias_semana))  # División entre el número de días para obtener el promedio.
