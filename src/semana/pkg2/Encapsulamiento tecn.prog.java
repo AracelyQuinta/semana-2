@@ -14,7 +14,7 @@ package semana.pkg2;
  * Aplica Encapsulamiento al proteger sus atributos.
  */
 // Definición de la clase abstracta
-abstract class estudiante {  
+ abstract class estudiante {  
     // Atributos protegidos o privados
     protected String nombre;  // Nombre del estudiante
 
@@ -34,7 +34,7 @@ abstract class estudiante {
 }
 
 
-class Estudiante {  // Atributos protegidos: solo accesibles desde la misma clase o subclases
+ class Estudiante {  // Atributos protegidos: solo accesibles desde la misma clase o subclases
     protected String nombre;  // Nombre del estudiante
     protected float promedioMatematica;  // Promedio en Matemáticas
     protected float promedioCiencias;    // Promedio en Ciencias

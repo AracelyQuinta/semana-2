@@ -9,7 +9,7 @@ package semana.pkg2;
  * @author HP - i5
  */
 // Clase padre (superclase)
-// Clase padre o superclase
+// Clase padre 
 class Persona {
     protected String nombre; // Atributo común a todas las personas
 
@@ -25,7 +25,7 @@ class Persona {
 }
 
 // Clase hija o subclase que hereda de Persona usando 'extends'
-class Estudiante extends Persona {
+ class Estudiante extends Persona {
     private float promedioMatematica, promedioCiencias, promedioEstudios, promedioLenguaje;
 
     // Constructor de Estudiante que reutiliza el constructor de Persona
